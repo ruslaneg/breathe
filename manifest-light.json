@@ -17,7 +17,7 @@
   ],
   "start_url": "/breathe/",
   "scope": "/breathe/",
+  "theme_color": "white",
   "background_color": "white",
-  "display": "standalone",
-  "theme_color": "white"
+  "display": "standalone"
 }

@@ -10,6 +10,12 @@ body {
   justify-content: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+  }
+}
+
 canvas {
   display: block;
   width: 200px;

@@ -7,8 +7,16 @@ canvas.height = 200 * dpr;
 ctx.scale(dpr, dpr);
 
 ctx.font = '20px system-ui, sans-serif';
-ctx.strokeStyle = '#dbf5ff';
 ctx.lineWidth = 5;
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.querySelector('meta[name="theme-color"]').content = 'black';
+  document.querySelector('link[rel="manifest"]').href = 'manifest-dark.json';
+
+  ctx.strokeStyle = '#162930';
+} else {
+  ctx.strokeStyle = '#dbf5ff';
+}
 
 const textWidths = {
   inhale: ctx.measureText('inhale').width / 2,

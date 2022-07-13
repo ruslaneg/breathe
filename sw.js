@@ -5,7 +5,8 @@ self.addEventListener('install', (event) => {
         '/breathe/',
         '/breathe/style.css',
         '/breathe/script.js',
-        '/breathe/manifest.json',
+        '/breathe/manifest-light.json',
+        '/breathe/manifest-dark.json',
         '/breathe/icon.svg',
         '/breathe/icon.png',
       ]);
