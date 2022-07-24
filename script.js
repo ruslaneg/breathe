@@ -18,29 +18,12 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   ctx.strokeStyle = '#dbf5ff';
 }
 
-const textWidths = {
-  inhale: ctx.measureText('inhale').width / 2,
-  exhale: ctx.measureText('exhale').width / 2,
-  hold: ctx.measureText('hold').width / 2,
-};
+const stages = ['inhale', 'hold', 'exhale', 'hold'];
+const textWidths = stages.map((text) => ctx.measureText(text).width);
 
 function text(section, opacity) {
   ctx.fillStyle = `rgba(129, 183, 204, ${opacity})`;
-
-  switch (section) {
-    case 0:
-      ctx.fillText('inhale', 100 - textWidths.inhale, 105);
-      break;
-    case 1:
-      ctx.fillText('hold', 100 - textWidths.hold, 105);
-      break;
-    case 2:
-      ctx.fillText('exhale', 100 - textWidths.exhale, 105);
-      break;
-    case 3:
-      ctx.fillText('hold', 100 - textWidths.hold, 105);
-      break;
-  }
+  ctx.fillText(stages[section], 100 - textWidths[section] / 2, 105);
 }
 
 function line(section, location, length) {
@@ -86,6 +69,10 @@ function tick(start) {
     text(section, 1 - opacity);
   } else {
     text(section, 1);
+  }
+
+  if (canvas.ariaLabel !== stages[section]) {
+    canvas.ariaLabel = stages[section];
   }
 
   window.requestAnimationFrame(() => tick(start));
