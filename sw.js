@@ -10,14 +10,14 @@ self.addEventListener('install', (event) => {
         '/breathe/icon.svg',
         '/breathe/icon.png',
       ]);
-    })
+    }),
   );
 
   self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(clients.claim());
+  event.waitUntil(globalThis.clients.claim());
 });
 
 self.addEventListener('fetch', (event) => {
@@ -32,6 +32,6 @@ self.addEventListener('fetch', (event) => {
           });
         })
       );
-    })
+    }),
   );
 });

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "serve",
+    "lint": "eslint ./*.js --fix && prettier -c ./*.{html,css,js,json}"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  }
+}
