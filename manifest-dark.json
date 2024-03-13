@@ -15,8 +15,8 @@
       "purpose": "maskable any"
     }
   ],
-  "start_url": "/breathe/",
-  "scope": "/breathe/",
+  "start_url": "/",
+  "scope": "/",
   "theme_color": "black",
   "background_color": "black",
   "display": "standalone"

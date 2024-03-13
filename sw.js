@@ -2,13 +2,13 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open('cache').then((cache) => {
       return cache.addAll([
-        '/breathe/',
-        '/breathe/style.css',
-        '/breathe/script.js',
-        '/breathe/manifest-light.json',
-        '/breathe/manifest-dark.json',
-        '/breathe/icon.svg',
-        '/breathe/icon.png',
+        '/',
+        '/style.css',
+        '/script.js',
+        '/manifest-light.json',
+        '/manifest-dark.json',
+        '/icon.svg',
+        '/icon.png',
       ]);
     }),
   );
