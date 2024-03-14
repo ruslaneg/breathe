@@ -82,5 +82,3 @@ function tick(start) {
 }
 
 tick(Date.now());
-
-navigator.serviceWorker.register('sw.js', { scope: './' });
