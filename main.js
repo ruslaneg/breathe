@@ -21,7 +21,30 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   ctx.strokeStyle = '#dbf5ff';
 }
 
-const stages = ['inhale', 'hold', 'exhale', 'hold'];
+const locales = {
+  ru: {
+    stages: ['вдох', 'пауза', 'выдох', 'пауза'],
+  },
+  en: {
+    stages: ['inhale', 'hold', 'exhale', 'hold'],
+  },
+};
+
+const locale = (() => {
+  const language = window.navigator.languages
+    .map((language) => {
+      // remove region (en-US -> en)
+      const loc = new Intl.Locale(language);
+      return loc.language;
+    })
+    .find((language) => {
+      return language in locales;
+    });
+
+  return locales[language || 'en'];
+})();
+
+const { stages } = locale;
 const textWidths = stages.map((text) => ctx.measureText(text).width);
 
 function text(section, opacity) {

@@ -4,11 +4,15 @@ The four stages speak for themselves: inhale-hold-exhale-hold.
 
 ![Screenshot](docs/Screenshot.png)
 
+## Features
+
+- Supports Russian and English
+- Works offline
+- Dark theme
+
 ## Tech used
 
-* Plain JavaScript `<canvas>`
-* Canvas scaled to `devicePixelRatio`
-* Hosted on GitHub Pages
-* Built with vite
-* Works offline with vite-plugin-pwa
-* ESLint and Prettier
+- Plain JavaScript `<canvas>`
+- Hosted on GitHub Pages
+- Built with vite
+- ESLint and Prettier
