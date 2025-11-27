@@ -4,7 +4,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "eslint ./*.js --fix && prettier -c ./*.{html,css,js,json} ./public/*.json",
+    "test": "prettier -c ./*.{html,css,js,json} ./public/*.json && eslint ./*.js --fix",
     "prepare": "husky"
   },
   "devDependencies": {
