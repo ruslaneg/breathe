@@ -4,13 +4,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "prettier -c ./*.{html,css,js,json} ./public/*.json && eslint ./*.js --fix",
+    "test": "eslint ./*.js --fix && prettier -c ./*.{html,css,js,json} ./public/*.json",
     "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "eslint": "^9.39.1",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.3",
